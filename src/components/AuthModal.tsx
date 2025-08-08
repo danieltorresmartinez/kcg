@@ -71,7 +71,7 @@ const AuthModal: React.FC<Props> = ({ visible, onClose }) => {
   };
 
   return (
-    <div className="fixed inset-0 z-50 bg-black/70 flex items-center justify-center">
+    <div className="fixed inset-0 z-[999] bg-black/70 flex items-center justify-center">
       <div className="bg-white rounded-2xl p-8 w-full max-w-md relative">
         <button
           className="fas fa-x absolute top-3 right-3 text-gray-500 hover:text-gray-700"
