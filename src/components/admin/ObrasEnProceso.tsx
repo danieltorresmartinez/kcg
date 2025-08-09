@@ -27,10 +27,11 @@ function ObrasEnProceso() {
             id: docSnap.id,
             nombre: data.codigo,
             jefeObra: data.creadoPor,
-            ordenDeCompraURL: data.ordenDeCompraURL,
+            ordenDeCompraURL: data.ordenDeCompraUrl,
             administradores: data.administradores || [],
             fechaInicio: data.fechaCreacion,
           });
+          console.log(data.ordenDeCompraUrl);
         }
 
         setObras(obrasData);

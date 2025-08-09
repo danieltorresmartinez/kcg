@@ -11,7 +11,7 @@ function Obras() {
         >
           Iniciar obra
         </div>
-        <div className="w-[2px] bg-black h-3/4"></div>
+        <div className="w-[2px] bg-black h-[175%]"></div>
         <div
           className="flex justify-center items-center w-5/12 h-96 text-5xl text-center cursor-pointer hover:bg-[#f7f7f7] rounded-r-lg"
           onClick={() => navigate("/unirse-a-obra")}

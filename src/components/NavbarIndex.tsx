@@ -18,7 +18,7 @@ function NavBarIndex() {
   return (
     <>
       <nav className="flex justify-between  fixed w-full bg-white z-[999]">
-        <div className="w-20"></div>
+        <div className="hidden lg:block w-20"></div>
         <div className="">
           <Link to="/">
             <img
@@ -38,10 +38,15 @@ function NavBarIndex() {
             to={isAuthenticated ? "/perfil" : "/auth"}
             className="hover:text-gray-600 cursor-pointer"
           >
-            <i className="z-[999] fa-solid fa-user text-center"></i>
+            <div className="hidden lg:block">
+              <i className="z-[999] fa-solid fa-user text-center"></i>
+            </div>
           </Link>
+          <div className="lg:hidden" onClick={() => setIsUserOpen(true)}>
+            <i className="z-[999] fa-solid fa-bars text-center text-2xl"></i>
+          </div>
           <ul
-            className={`z-[997] justify-items-center rounded-b-md absolute p-2 w-40 transition-all duration-300 transform right-2 ${
+            className={`hidden lg:block z-[997] justify-items-center rounded-b-md absolute p-2 w-40 transition-all duration-300 transform right-2 ${
               isUserOpen
                 ? "opacity-100 visible translate-y-16"
                 : "opacity-0 invisible -translate-y-2"
@@ -109,6 +114,9 @@ function NavBarIndex() {
           </ul>
         </div>
       </nav>
+      {isUserOpen && (
+        <div className="lg:hidden w-[2000px] h-[2000px] bg-white"></div>
+      )}
     </>
   );
 }
